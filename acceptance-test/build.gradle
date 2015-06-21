@@ -1,17 +1,19 @@
 description 'Automated acceptance test'
 
 buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-    }
-    dependencies {
-        classpath "com.example:gradle-plugin-blank:$version"
-    }
+  repositories {
+    mavenLocal()
+    jcenter()
+  }
+  dependencies {
+    classpath "com.example:gradle-pom-plugin:0.0.1"
+  }
 }
 
+repositories {
+  mavenLocal()
+  jcenter()
+}
 apply plugin: 'com.example.hello'
 
-task test << {
-    assert plugins.hasPlugin('com.example.hello')
-}
+
